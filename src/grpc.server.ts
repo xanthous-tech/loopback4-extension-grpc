@@ -89,7 +89,6 @@ export class GrpcServer extends Context implements Server {
       ) || {};
 
     for (const methodName in controllerMethods) {
-      const fullName = `${className}.${methodName}`;
       const config = controllerMethods[methodName];
 
       const proto: grpc.GrpcObject = this.generator.getProto(config.PROTO_NAME);
