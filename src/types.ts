@@ -1,5 +1,5 @@
-import {Constructor} from '@loopback/context';
-import {GrpcSequenceInterface} from './grpc.sequence';
+import { Constructor } from '@loopback/context';
+import { GrpcSequenceInterface } from './grpc.sequence';
 
 // Copyright IBM Corp. 2017. All Rights Reserved.
 // Node module: loopback4-extension-starter
@@ -22,6 +22,11 @@ export namespace Config {
     host?: string;
     port?: number;
     sequence?: Constructor<GrpcSequenceInterface>;
+
+    /**
+     * Configuration for underlying grpc.Server
+     */
+    options?: object;
   }
   export interface Method {
     PROTO_NAME: string;
