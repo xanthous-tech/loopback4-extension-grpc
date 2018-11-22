@@ -22,7 +22,13 @@ export namespace Config {
     host?: string;
     port?: number;
     sequence?: Constructor<GrpcSequenceInterface>;
+
+    /**
+     * Extra objects. passed into grpc server.
+     */
+    options?: object;
   }
+
   export interface Method {
     PROTO_NAME: string;
     PROTO_PACKAGE: string;
